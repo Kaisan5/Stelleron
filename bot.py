@@ -83,4 +83,16 @@ class Bot(Client):
     async def stop(self, *args):
         await super().stop()
         self.LOGGER(__name__).info("Bot stopped.")
+
+
+from pyrogram.errors import FloodWait
+import asyncio
+
+async def start(self):
+    try:
+        await super().start()
+    except FloodWait as e:
+        print(f"FloodWait: Sleeping for {e.value} seconds")
+        await asyncio.sleep(e.value)
+        await super().start()
             
