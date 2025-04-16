@@ -30,10 +30,10 @@ DB_CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002456061680"))
 OWNER = os.environ.get("OWNER", "Rai Yan")
 
 # OWNER ID
-OWNER_ID = 6161189904
+OWNER_ID = 7654385403
 
 # SUDO: those who can edit admins in channel
-SUDO = [6161189904]
+SUDO = [7654385403]
 if OWNER_ID not in SUDO:
     SUDO.append(OWNER_ID)
 
